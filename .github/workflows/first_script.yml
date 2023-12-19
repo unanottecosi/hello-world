@@ -22,6 +22,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a Python script
+        env:
+          DAN_SECRET_TOKEN: ${{ secrets.DAN_SECRET_TOKEN }}
         run: python .github/workflows/script1.py
 
 
